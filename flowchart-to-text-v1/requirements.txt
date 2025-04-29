@@ -1,0 +1,34 @@
+# ===============================
+# 📦 Requirements for Flowchart-to-English App
+# ===============================
+
+# 🌐 Web App Frameworks
+streamlit                 # UI interface for uploading images and viewing output
+fastapi                   # Backend API for image parsing
+uvicorn[standard]         # ASGI server to serve FastAPI app
+
+# 🔁 Communication and File Upload
+requests                  # For Streamlit-to-FastAPI HTTP calls
+python-multipart          # Enables file uploads in FastAPI
+
+# 🖼 Image Processing
+pillow                    # PIL image handling
+opencv-python-headless    # OpenCV without GUI dependencies
+numpy                     # Core image array operations
+
+# 🔍 OCR & Text Processing
+easyocr                   # GPU-capable OCR engine
+textblob                 # Optional: lightweight text post-processing (optional)
+
+# 🤖 Object Detection and Language Models
+ultralytics               # YOLOv8/v9 detection (loads .pt models)
+torch                     # Backend for YOLO and EasyOCR
+transformers              # Optional: used for text summarization (LLMs)
+
+# 📐 Geometry Utilities
+shapely                   # Geometry operations for arrow-head box logic
+
+# ✅ Optional Debug Tools (Uncomment if needed)
+# matplotlib              # For plotting / bounding box debug
+
+accelerate                #needed for LLM GPU Acceleration

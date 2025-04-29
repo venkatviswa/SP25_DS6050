@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: flowchart-app
+    env: python
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port=$PORT --server.address=0.0.0.0
+    plan: free
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: API_URL
+        value: https://your-fastapi-service.onrender.com/process-image
+    pythonVersion: 3.10
